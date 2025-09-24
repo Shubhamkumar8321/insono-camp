@@ -33,7 +33,7 @@ export default function CardSection() {
                   src={product.image}
                   alt={product.title}
                   fill
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-contain"
                 />
               </div>
               <h3 className="mt-3 text-lg font-semibold text-center">

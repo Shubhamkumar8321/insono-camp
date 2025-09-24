@@ -56,8 +56,6 @@ export default function Navigation() {
     return () => clearTimeout(typing);
   }, [charIndex, isDeleting, wordIndex, words]);
 
-  const isFormPage = pathname === "/appointment";
-
   return (
     <header
       className={`fixed top-0 left-0 z-50 w-full transition-all duration-500 font-museo ${
@@ -78,19 +76,14 @@ export default function Navigation() {
         </Link>
 
         {/* Search */}
-        {!isFormPage && (
-          <div className="relative w-96">
-            <Search
-              className="absolute left-2 top-2.5 text-gray-400"
-              size={16}
-            />
-            <input
-              type="text"
-              placeholder={`Search for ${animatedText}`}
-              className="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#023784] focus:outline-none text-sm"
-            />
-          </div>
-        )}
+        <div className="relative w-96">
+          <Search className="absolute left-2 top-2.5 text-gray-400" size={16} />
+          <input
+            type="text"
+            placeholder={`Search for ${animatedText}`}
+            className="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#023784] focus:outline-none text-sm bg-white"
+          />
+        </div>
 
         {/* Call button */}
         <a
@@ -102,7 +95,7 @@ export default function Navigation() {
       </div>
 
       {/* ---------------- MOBILE ---------------- */}
-      <div className="flex flex-col sm:hidden w-full px-4 py-3 gap-2">
+      <div className="flex flex-col sm:hidden w-full px-4 py-3 gap-2 bg-white">
         {/* Top row: Logo + Call button */}
         <div className="w-full flex items-center justify-between">
           <Link href="/" className="flex items-center">
@@ -124,19 +117,14 @@ export default function Navigation() {
         </div>
 
         {/* Search bar below */}
-        {!isFormPage && (
-          <div className="relative w-full">
-            <Search
-              className="absolute left-2 top-2.5 text-gray-400"
-              size={16}
-            />
-            <input
-              type="text"
-              placeholder={`Search for ${animatedText}`}
-              className="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#023784] focus:outline-none text-sm"
-            />
-          </div>
-        )}
+        <div className="relative w-full bg-white rounded-md">
+          <Search className="absolute left-2 top-2.5 text-gray-400" size={16} />
+          <input
+            type="text"
+            placeholder={`Search for ${animatedText}`}
+            className="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#023784] focus:outline-none text-sm bg-white"
+          />
+        </div>
       </div>
     </header>
   );

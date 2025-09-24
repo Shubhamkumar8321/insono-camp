@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col bg-gradient-to-b from-[#eaf5ff] to-white">
+    <main className="flex flex-col bg-gradient-to-b from-[#eaf5ff]/50 to-white">
       <Hero />
       <Card />
       <Faq />

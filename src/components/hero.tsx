@@ -20,57 +20,65 @@ export default function HeroSection() {
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         {/* LEFT CONTENT */}
-        <div className="bg-white p-6 rounded-lg shadow-md mt-16">
+        <div className="bg-white p-6 rounded-lg shadow-md">
           <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">
             Restore Clear Hearing at Your Doorstep
           </h1>
-          <h2 className="text-lg font-medium mb-4 text-gray-700">
-            What are you looking for?
-          </h2>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {services.map((service, i) => {
-              // Show only first 6 on mobile
-              const showOnMobile = i < 6;
-              return (
-                <div
-                  key={i}
-                  className={`flex items-center gap-3 p-3 border rounded-lg hover:shadow-md transition cursor-pointer bg-white
-                    ${!showOnMobile ? "hidden sm:flex" : ""}
-                  `}
-                >
-                  <div className="relative w-10 h-10 flex-shrink-0">
-                    <Image
-                      src={service.icon}
-                      alt={service.title}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <span className="text-sm font-medium text-gray-800">
-                    {service.title}
-                  </span>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+            {services.slice(0, 6).map((service, i) => (
+              <div
+                key={i}
+                className="flex flex-col items-center text-center p-4 hover:shadow-md transition cursor-pointer bg-white rounded-lg"
+              >
+                {/* Image */}
+                <div className="relative w-16 h-16 mb-3">
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    fill
+                    className="object-contain"
+                  />
                 </div>
-              );
-            })}
+                {/* Title */}
+                <span className="text-sm font-medium text-gray-800">
+                  {service.title}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* RIGHT IMAGE GRID - hidden on mobile */}
-        <div className="hidden sm:grid grid-cols-2 gap-4">
-          {heroImages.map((img, i) => (
-            <div
-              key={i}
-              className="relative h-36 sm:h-60 lg:h-[240px] rounded-lg overflow-hidden"
-            >
-              <Image
-                src={img}
-                alt={`Hero ${i + 1}`}
-                fill
-                className="object-contain"
-              />
-            </div>
-          ))}
+        {/* RIGHT IMAGE GRID */}
+        <div className="hidden sm:grid grid-cols-2 gap-0 ">
+          {/* Large image on left (takes full height) */}
+          <div className="relative row-span-2 h-80 lg:h-[480px] overflow-hidden border border-gray-200 rounded-l-lg">
+            <Image
+              src={heroImages[0]}
+              alt="Hero Large"
+              fill
+              className="object-contain"
+            />
+          </div>
+
+          {/* Top right small image */}
+          <div className="relative h-40 lg:h-[240px] overflow-hidden border border-gray-200 rounded-r-lg">
+            <Image
+              src={heroImages[1]}
+              alt="Hero Small 1"
+              fill
+              className="object-contain"
+            />
+          </div>
+
+          {/* Bottom right small image */}
+          <div className="relative h-40 lg:h-[240px] overflow-hidden border border-gray-200 rounded-r-lg">
+            <Image
+              src={heroImages[2]}
+              alt="Hero Small 2"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>

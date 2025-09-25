@@ -5,8 +5,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col bg-gradient-to-b from-[#eaf5ff]/50 to-white">
-      <Hero />
+    <main>
+      <section className="relative min-h-[90vh] bg-gradient-to-b from-[#eaf5ff] to-white flex flex-col items-center justify-center text-center">
+        <Hero />
+      </section>
       <Card />
       <Faq />
     </main>

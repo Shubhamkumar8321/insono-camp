@@ -58,7 +58,7 @@ export default function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full transition-all duration-500 font-museo ${
+      className={`fixed top-0 left-0 z-50 w-full font-museo transition-all  duration-500 ${
         scrolled ? "bg-white shadow-sm" : "bg-transparent"
       } ${loaded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6"}`}
     >
@@ -95,7 +95,11 @@ export default function Navigation() {
       </div>
 
       {/* ---------------- MOBILE ---------------- */}
-      <div className="flex flex-col sm:hidden w-full px-4 py-3 gap-2 bg-white">
+      <div
+        className={`flex flex-col sm:hidden w-full px-4 py-3 gap-2 transition-colors duration-500 ${
+          scrolled ? "bg-white" : "bg-transparent"
+        }`}
+      >
         {/* Top row: Logo + Call button */}
         <div className="w-full flex items-center justify-between">
           <Link href="/" className="flex items-center">
@@ -116,7 +120,7 @@ export default function Navigation() {
           </a>
         </div>
 
-        {/* Search bar below */}
+        {/* Search bar below
         <div className="relative w-full bg-white rounded-md">
           <Search className="absolute left-2 top-2.5 text-gray-400" size={16} />
           <input
@@ -124,7 +128,7 @@ export default function Navigation() {
             placeholder={`Search for ${animatedText}`}
             className="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#023784] focus:outline-none text-sm bg-white"
           />
-        </div>
+        </div> */}
       </div>
     </header>
   );

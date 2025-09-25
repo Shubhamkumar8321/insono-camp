@@ -2,7 +2,11 @@ import Hero from "@/components/hero";
 import Card from "@/components/card";
 import Faq from "@/components/FAQ";
 import Image from "next/image";
-
+import WhyBestSection from "@/components/whychoose";
+import Testimonials from "@/components/Testomonial";
+import Brands from "@/components/Brands";
+import HearingAid from "@/components/Hearingaid";
+import Clinics from "@/components/clinics";
 export default function Home() {
   return (
     <main>
@@ -10,7 +14,12 @@ export default function Home() {
         <Hero />
       </section>
       <Card />
+      <Clinics />
+      <WhyBestSection />
+      <Testimonials />
       <Faq />
+      <HearingAid />
+      <Brands />
     </main>
   );
 }

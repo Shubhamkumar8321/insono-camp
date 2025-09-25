@@ -82,14 +82,14 @@ export default function FAQ() {
         <div className="text-center mt-16">
           <h3 className="text-xl font-semibold mb-4">Still have questions?</h3>
           <p className="text-white/80 mb-6">
-            Our audiologists are here to guide you. Book a free consultation
-            today.
+            Our audiologists are here to guide you. See Price List a free
+            consultation today.
           </p>
           <a
-            href="/form"
+            href="/appointment"
             className="inline-block bg-white text-[#023784] font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition"
           >
-            Book a Free Consultation
+            See Price List a Free Consultation
           </a>
         </div>
       </div>

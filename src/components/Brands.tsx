@@ -50,7 +50,7 @@ export default function HearingBanner() {
         </p>
         <a
           href="/appointment"
-          className="inline-block px-16 sm:px-48 py-3 bg-gray-100 text-blue-900 font-semibold rounded-lg hover:bg-gray-300 transition"
+          className="inline-block px-16 sm:px-48 py-3 bg-gray-200 text-blue-900 font-semibold rounded-lg hover:bg-white transition"
         >
           See Price List
         </a>

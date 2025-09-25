@@ -6,14 +6,14 @@ import Link from "next/link";
 import "@/app/globals.css"; // Ensure this path is correct
 
 const products = [
-  { id: 1, title: "Digital Hearing Aids", image: "/1.jpg" },
-  { id: 2, title: "Rechargeable Hearing Aids", image: "/2.png" },
-  { id: 3, title: "Invisible Hearing Aids", image: "/3.png" },
-  { id: 4, title: "Behind-the-Ear (BTE)", image: "/4.png" },
-  { id: 5, title: "CIC Hearing Aids", image: "/1.jpg" },
-  { id: 6, title: "Bluetooth Hearing Aids", image: "/2.png" },
-  { id: 7, title: "Premium Hearing Devices", image: "/3.png" },
-  { id: 8, title: "Smart Hearing Solutions", image: "/4.png" },
+  { id: 1, title: "Digital Hearing Aids", image: "/2.png" },
+  { id: 2, title: "Rechargeable Hearing Aids", image: "/3.png" },
+  { id: 3, title: "Invisible Hearing Aids", image: "/4.png" },
+  { id: 4, title: "Behind-the-Ear (BTE)", image: "/product/4.png" },
+  { id: 5, title: "CIC Hearing Aids", image: "/product/5.png" },
+  { id: 6, title: "Bluetooth Hearing Aids", image: "/product/6.png" },
+  { id: 7, title: "Premium Hearing Devices", image: "/product/7.png" },
+  { id: 8, title: "Smart Hearing Solutions", image: "/product/8.png" },
 ];
 
 export default function CardSection() {

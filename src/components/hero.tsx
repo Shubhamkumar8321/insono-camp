@@ -4,17 +4,17 @@ import Image from "next/image";
 
 export default function HeroSection() {
   const services = [
-    { title: "Digital Hearing Aids", icon: "/4.png" },
+    { title: "Digital Hearing Aids", icon: "/2.png" },
     { title: "Rechargeable Hearing Aids", icon: "/3.png" },
-    { title: "Invisible Hearing Aids", icon: "/2.png" },
-    { title: "Behind-the-Ear (BTE)", icon: "/4.png" },
-    { title: "In-the-Canal (ITC)", icon: "/3.png" },
-    { title: "CIC / IIC Models", icon: "/2.png" },
-    { title: "Free Hearing Test", icon: "/3.png" },
-    { title: "Hearing Aid Accessories", icon: "/4.png" },
+    { title: "Invisible Hearing Aids", icon: "/4.png" },
+    { title: "Behind-the-Ear (BTE)", icon: "/product/2.png" },
+    { title: "In-the-Canal (ITC)", icon: "/product/5.png" },
+    { title: "CIC / IIC Models", icon: "/product/6.png" },
+    { title: "Free Hearing Test", icon: "/product/7.png" },
+    { title: "Hearing Aid Accessories", icon: "/product/8.png" },
   ];
 
-  const heroImages = ["/test1.jpeg", "/test2.jpg", "/test3.jpeg", "/test4.jpg"];
+  const heroImages = ["/h1.jpg", "/h2.webp", "/h3.jpeg", "/h4.webp"];
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 mt-6 sm:mt-0">
